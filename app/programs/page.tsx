@@ -1,16 +1,13 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   FaBrain,
   FaPalette,
-  FaMusic,
   FaBookReader,
   FaHeart,
   FaSeedling,
-  FaChevronLeft,
-  FaChevronRight,
 } from "react-icons/fa";
 import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";

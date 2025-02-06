@@ -78,7 +78,7 @@ export default function ContactPage() {
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg: "Message sent successfully!" },
+        info: { error: false, msg: null as unknown as string },
       });
 
       setFormData({
@@ -89,14 +89,12 @@ export default function ContactPage() {
         phone: "",
         message: "",
       });
-    } catch (error) {
+    } catch (err: unknown) {
+      console.error(err);
       setStatus({
         submitted: false,
         submitting: false,
-        info: {
-          error: true,
-          msg: "An error occurred. Please try again later.",
-        },
+        info: { error: true, msg: null as unknown as string },
       });
     }
   };
@@ -225,7 +223,7 @@ export default function ContactPage() {
                       htmlFor="parentName"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Parent's Name
+                      Parent&apos;s Name
                     </label>
                     <input
                       type="text"
@@ -241,7 +239,7 @@ export default function ContactPage() {
                       htmlFor="childName"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Child's Name
+                      Child&apos;s Name
                     </label>
                     <input
                       type="text"
@@ -260,7 +258,7 @@ export default function ContactPage() {
                       htmlFor="childAge"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Child's Age
+                      Child&apos;s Age
                     </label>
                     <input
                       type="text"
