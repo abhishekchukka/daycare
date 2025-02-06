@@ -63,7 +63,8 @@ export default function Contact() {
         phone: "",
         message: "",
       });
-    } catch (error) {
+    } catch (err) {
+      console.error(err);
       setStatus({
         submitted: false,
         submitting: false,

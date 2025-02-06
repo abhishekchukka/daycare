@@ -247,18 +247,6 @@ export default function Programs() {
     return `${baseStyles} ${colors[Math.floor(timeIndex / 3)]}`;
   };
 
-  const getRandomColor = () => {
-    const colors = [
-      "bg-pink-100 hover:bg-pink-200",
-      "bg-blue-100 hover:bg-blue-200",
-      "bg-yellow-100 hover:bg-yellow-200",
-      "bg-green-100 hover:bg-green-200",
-      "bg-purple-100 hover:bg-purple-200",
-      "bg-orange-100 hover:bg-orange-200",
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
-
   const scrollToDetails = () => {
     const detailsSection = document.getElementById("program-details");
     if (detailsSection) {

@@ -64,7 +64,7 @@ export default function About() {
       setActiveIndex((prev) => (prev + 1) % features.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [features.length]);
 
   return (
     <section
