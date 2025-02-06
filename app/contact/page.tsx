@@ -31,8 +31,29 @@ const contactData = {
   },
 };
 
+// First, let's define the proper types
+interface FormData {
+  parentName: string;
+  childName: string;
+  childAge: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+interface StatusInfo {
+  error: boolean;
+  msg: string | null;
+}
+
+interface Status {
+  submitted: boolean;
+  submitting: boolean;
+  info: StatusInfo;
+}
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     parentName: "",
     childName: "",
     childAge: "",
@@ -41,7 +62,7 @@ export default function ContactPage() {
     message: "",
   });
 
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<Status>({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null },
@@ -78,7 +99,7 @@ export default function ContactPage() {
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg: null as unknown as string },
+        info: { error: false, msg: "Message sent successfully!" },
       });
 
       setFormData({
@@ -89,12 +110,15 @@ export default function ContactPage() {
         phone: "",
         message: "",
       });
-    } catch (err: unknown) {
+    } catch (err) {
       console.error(err);
       setStatus({
         submitted: false,
         submitting: false,
-        info: { error: true, msg: null as unknown as string },
+        info: {
+          error: true,
+          msg: "An error occurred. Please try again later.",
+        },
       });
     }
   };
