@@ -217,7 +217,8 @@ export default function Programs() {
     },
   };
 
-  const getActivityForTimeSlot = (day: string, time: string) => {
+  type DayType = keyof typeof timeTable.activities.special;
+  const getActivityForTimeSlot = (day: DayType, time: string) => {
     const specialActivity = timeTable.activities.special[day]?.[time];
     if (specialActivity) {
       return specialActivity;
