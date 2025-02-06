@@ -1,21 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Playful primary colors */
+  --color-red: #ff6b6b;
+  --color-yellow: #ffd93d;
+  --color-green: #6bcb77;
+  --color-blue: #4d96ff;
+  --color-purple: #b088f9;
+  --color-pink: #ff9ecd;
+  --color-orange: #ffa07a;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Soft background colors */
+  --color-red-light: #ffe2e2;
+  --color-yellow-light: #fff6d6;
+  --color-green-light: #e2f5e6;
+  --color-blue-light: #e6f0ff;
+  --color-purple-light: #f3ebff;
+  --color-pink-light: #ffe6f3;
+  --color-orange-light: #ffe8e0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #ffffff;
+  color: #2d3436;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.glow {
+  position: relative;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.glow:hover::before {
+  opacity: 1;
+}
+
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  padding: 1px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #ff6b6b, #4ecdc4, #ffd93d);
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-modern {
+  @apply px-8 py-3 rounded-full font-semibold text-black transition-all duration-300;
+  background-color: var(--color-yellow);
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-orange);
+}
+
+.hero-pattern {
+  background-color: var(--color-blue-light);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+.nav-item {
+  @apply px-4 py-3 rounded-2xl font-medium transition-all duration-300;
+}
+
+.nav-item-red {
+  @apply hover:bg-[var(--color-red-light)] hover:text-[var(--color-red)];
+}
+
+.nav-item-yellow {
+  @apply hover:bg-[var(--color-yellow-light)] hover:text-[var(--color-yellow)];
+}
+
+.nav-item-green {
+  @apply hover:bg-[var(--color-green-light)] hover:text-[var(--color-green)];
+}
+
+.nav-item-blue {
+  @apply hover:bg-[var(--color-blue-light)] hover:text-[var(--color-blue)];
+}
+
+.title-text {
+  color: var(--color-blue);
+}
+
+.glass-card-dark {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.program-card {
+  font-family: "Quicksand", sans-serif;
+}
+
+.program-card h3 {
+  font-weight: 700;
+}
+
+.program-card p {
+  font-weight: 500;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }

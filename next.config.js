@@ -4,11 +4,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**", // Allows images from any domain
+        hostname: "*", // Allows images from any domain
       },
       {
         protocol: "http",
-        hostname: "**", // Allows images from any domain
+        hostname: "*", // Allows images from any domain
       },
     ],
     dangerouslyAllowSVG: true, // Allows SVG images
