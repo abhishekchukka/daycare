@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaHeart, FaGraduationCap, FaUsers, FaSmile } from "react-icons/fa";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 
 // Customizable data
 const aboutData = {

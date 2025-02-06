@@ -1,21 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import {
-  FaBrain,
-  FaPalette,
-  FaMusic,
-  FaBookReader,
-  FaHeart,
-  FaSeedling,
-} from "react-icons/fa";
+
+import { FaBrain, FaPalette, FaHeart, FaSeedling } from "react-icons/fa";
 import { GiMeditation, GiJumpingRope } from "react-icons/gi";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+// import Link from "next/link";
+// import { useRouter } from "next/navigation";
 
 export default function Programs() {
-  const router = useRouter();
+  // const router = useRouter();
 
   const programs = [
     {

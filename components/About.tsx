@@ -19,7 +19,7 @@ export default function About() {
       icon: <FaShieldAlt className="text-5xl text-[var(--color-blue)]" />,
       title: "Safety First Environment",
       description:
-        "State-of-the-art security systems, child-safe facilities, and strict safety protocols ensure your child's wellbeing is our top priority.",
+        "State-of-the-art security systems, child-safe facilities, and strict safety protocols ensure your child&apos;s wellbeing is our top priority.",
       stats: "100% Safety Record",
     },
     {
@@ -40,14 +40,14 @@ export default function About() {
       icon: <FaMobileAlt className="text-5xl text-[var(--color-purple)]" />,
       title: "Parent Connect App",
       description:
-        "Stay updated with real-time notifications, daily activity reports, and precious moments of your child's day through our mobile app.",
+        "Stay updated with real-time notifications, daily activity reports, and precious moments of your child&apos;s day through our mobile app.",
       stats: "24/7 Updates",
     },
     {
       icon: <FaHeartbeat className="text-5xl text-[var(--color-red)]" />,
       title: "Health & Wellness",
       description:
-        "Regular health monitoring, balanced nutrition plans, and physical activities ensure your child's holistic development.",
+        "Regular health monitoring, balanced nutrition plans, and physical activities ensure your child&apos;s holistic development.",
       stats: "Certified Healthcare",
     },
     {
@@ -83,7 +83,7 @@ export default function About() {
             Why Choose Little Soldiers Family DayCare?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your child's safety, education, and happiness are our top
+            Your child&apos;s safety, education, and happiness are our top
             priorities. We provide a nurturing environment where every child can
             thrive and grow.
           </p>

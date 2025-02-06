@@ -9,7 +9,7 @@ import {
   FaHeart,
   FaSeedling,
 } from "react-icons/fa";
-import { GiMeditation, GiJumpingRope } from "react-icons/gi";
+// import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";
 import { useState } from "react";
 

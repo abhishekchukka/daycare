@@ -3,8 +3,6 @@ import About from "@/components/About";
 import Programs from "@/components/Programs";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Link from "next/link";
 
 // ... existing code ...
 

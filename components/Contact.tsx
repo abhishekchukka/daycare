@@ -93,8 +93,8 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We'd love to hear from you! Send us a message and start your child's
-            journey with us.
+            We&apos;d love to hear from you! Send us a message and start your
+            child&apos;s journey with us.
           </p>
         </motion.div>
 
@@ -155,7 +155,7 @@ export default function Contact() {
                     htmlFor="parentName"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Parent's Name
+                    Parent&apos;s Name
                   </label>
                   <input
                     type="text"
@@ -172,7 +172,7 @@ export default function Contact() {
                     htmlFor="childName"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Child's Name
+                    Child&apos;s Name
                   </label>
                   <input
                     type="text"
@@ -192,7 +192,7 @@ export default function Contact() {
                     htmlFor="childAge"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Child's Age
+                    Child&apos;s Age
                   </label>
                   <input
                     type="text"
