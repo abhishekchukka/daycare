@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Programs from "@/components/Programs";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
+import Accordion from "@/components/Accordion";
 
 // ... existing code ...
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Programs />
+      <Accordion />
       <Gallery />
       <Contact />
     </main>
