@@ -12,14 +12,14 @@ export default function Gallery() {
       description: "Where imagination comes to life",
     },
     {
-      src: "https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=2070&auto=format&fit=crop",
+      src: "/sivaDaycare-3.jpg",
       title: "Story Time",
       size: "small",
       emoji: "📚",
       description: "Adventures in reading",
     },
     {
-      src: "https://images.unsplash.com/photo-1440288736878-766bd5839edb?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/sivaDaycare-1.jpg",
       title: "Playtime Fun",
       size: "medium",
       emoji: "🎮",
@@ -33,7 +33,7 @@ export default function Gallery() {
       description: "Growing minds at work",
     },
     {
-      src: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop",
+      src: "/sivaDaycare-2.jpg",
       title: "Outdoor Adventures",
       size: "medium",
       emoji: "🌳",

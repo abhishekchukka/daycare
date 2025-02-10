@@ -14,10 +14,22 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "About", className: "nav-item nav-item-red" },
-    { name: "Programs", className: "nav-item nav-item-green" },
-    { name: "Gallery", className: "nav-item nav-item-yellow" },
-    { name: "Contact", className: "nav-item nav-item-blue" },
+    {
+      name: "About",
+      className: "nav-item nav-item-red text-xl hover:shadow-md",
+    },
+    {
+      name: "Programs",
+      className: "nav-item nav-item-green text-xl hover:shadow-md",
+    },
+    {
+      name: "Gallery",
+      className: "nav-item nav-item-yellow text-xl hover:shadow-md",
+    },
+    {
+      name: "Contact",
+      className: "nav-item nav-item-blue text-xl hover:shadow-md",
+    },
   ];
 
   const coloredTitle = "Little Soldiers Family DayCare"

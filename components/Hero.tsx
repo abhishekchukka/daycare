@@ -16,7 +16,7 @@ export default function Hero() {
       highlight: "Nurturing Hearts, Growing Minds",
     },
     {
-      title: "A Safe Haven for Your Little Ones",
+      title: "A Safe Heaven for Your Little Ones",
       description:
         "Providing a secure, loving environment where children thrive through play-based learning.",
       image:
