@@ -1,9 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLightbulb, FaPalette, FaBrain, FaHeart, FaComments } from "react-icons/fa";
+import {
+  FaLightbulb,
+  FaPalette,
+  FaBrain,
+  FaHeart,
+  FaComments,
+} from "react-icons/fa";
 
 interface AccordionItem {
   title: string;
@@ -18,31 +24,36 @@ export default function Accordion() {
   const items: AccordionItem[] = [
     {
       title: "Innovation",
-      content: "We foster innovative thinking through hands-on experiments, STEAM activities, and problem-solving challenges. Children learn to think outside the box and develop creative solutions to age-appropriate challenges, setting the foundation for future success in an ever-evolving world.",
+      content:
+        "We foster innovative thinking through hands-on experiments, STEAM activities, and problem-solving challenges. Children learn to think outside the box and develop creative solutions to age-appropriate challenges, setting the foundation for future success in an ever-evolving world.",
       icon: <FaLightbulb className="text-2xl" />,
       color: "text-yellow-500",
     },
     {
       title: "Creativity",
-      content: "Our curriculum emphasizes creative expression through art, music, dance, and imaginative play. We provide various materials and opportunities for children to explore their artistic abilities, encouraging self-expression and building confidence in their creative capabilities.",
+      content:
+        "Our curriculum emphasizes creative expression through art, music, dance, and imaginative play. We provide various materials and opportunities for children to explore their artistic abilities, encouraging self-expression and building confidence in their creative capabilities.",
       icon: <FaPalette className="text-2xl" />,
       color: "text-pink-500",
     },
     {
       title: "Critical Thinking",
-      content: "Through guided discovery and inquiry-based learning, we develop critical thinking skills. Children engage in activities that encourage observation, analysis, and logical reasoning, helping them become independent thinkers and problem solvers.",
+      content:
+        "Through guided discovery and inquiry-based learning, we develop critical thinking skills. Children engage in activities that encourage observation, analysis, and logical reasoning, helping them become independent thinkers and problem solvers.",
       icon: <FaBrain className="text-2xl" />,
       color: "text-purple-500",
     },
     {
       title: "Emotional Intelligence",
-      content: "We prioritize emotional development by teaching children to recognize, understand, and manage their emotions. Through mindfulness activities, social interactions, and guided discussions, children learn empathy, self-awareness, and healthy emotional expression.",
+      content:
+        "We prioritize emotional development by teaching children to recognize, understand, and manage their emotions. Through mindfulness activities, social interactions, and guided discussions, children learn empathy, self-awareness, and healthy emotional expression.",
       icon: <FaHeart className="text-2xl" />,
       color: "text-red-500",
     },
     {
       title: "Communication",
-      content: "Strong communication skills are developed through daily activities that encourage verbal expression, active listening, and collaborative play. We create an environment where children feel comfortable expressing their thoughts, ideas, and feelings while respecting others.",
+      content:
+        "Strong communication skills are developed through daily activities that encourage verbal expression, active listening, and collaborative play. We create an environment where children feel comfortable expressing their thoughts, ideas, and feelings while respecting others.",
       icon: <FaComments className="text-2xl" />,
       color: "text-blue-500",
     },
@@ -70,7 +81,7 @@ export default function Accordion() {
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {items.map((item, index) => (
             <motion.div
               key={index}
@@ -131,4 +142,4 @@ export default function Accordion() {
       </div>
     </section>
   );
-} 
+}
