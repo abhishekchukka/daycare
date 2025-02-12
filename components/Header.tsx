@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { Righteous } from "next/font/google";
 
@@ -12,6 +12,25 @@ const righteous = Righteous({
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY) { // scrolling down
+        setVisible(false);
+      } else { // scrolling up
+        setVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
   const navItems = [
     { name: "About", className: "nav-item nav-item-red" },
@@ -48,23 +67,20 @@ export default function Header() {
     });
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className={`bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ${
+      visible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Logo className="size-20" />
-          <span
-            className={`${righteous.className} text-center text-4xl md:text-3xl py-8 font-bold tracking-wider flex flex-wrap`}
-          >
-            {coloredTitle}
-          </span>
+          <Logo className="size-32 md:size-40" />
         </Link>
         <nav className="hidden md:block">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-8">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
                   href={`${item.name.toLowerCase()}`}
-                  className={`text-gray-600 ${item.className}`}
+                  className={`text-gray-600 text-xl ${item.className}`}
                 >
                   {item.name}
                 </Link>
