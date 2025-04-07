@@ -81,7 +81,7 @@ export default function Accordion() {
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {items.map((item, index) => (
             <motion.div
               key={index}
