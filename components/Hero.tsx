@@ -136,8 +136,8 @@ export default function Hero() {
                   <span className="font-semibold">
                     ✦ Limited Spots Available:
                   </span>{" "}
-                  Secure your child's place by pre-registering today! Our
-                  priority enrollment period is now open.
+                  Secure your child place by pre-registering today! Our priority
+                  enrollment period is now open.
                 </p>
               </div>
 
@@ -244,7 +244,7 @@ export default function Hero() {
                 area supports physical development and exploration.
               </p>
               <p className="text-gray-200">
-                We're committed to creating a nurturing environment where
+                We are committed to creating a nurturing environment where
                 children can learn, grow, and thrive while parents enjoy peace
                 of mind knowing their little ones are in capable hands.
               </p>
