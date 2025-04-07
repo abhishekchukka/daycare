@@ -43,7 +43,7 @@ const programsPageContent = {
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/flagged/photo-1567116681178-c326fa4e2c8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
   overview: {
@@ -65,7 +65,7 @@ const programsPageContent = {
     message:
       "Join our family and watch your child thrive in a nurturing, educational environment. Our programs provide the perfect foundation for lifelong learning and success.",
     image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1613794713137-a78aba4be84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoaWxkcmVuJTIwcGxheWluZ3xlbnwwfHwwfHx8MA%3D%3D",
   },
 };
 

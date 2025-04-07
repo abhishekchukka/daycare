@@ -1,6 +1,7 @@
 "use client"; // Add this at the top since we're using client-side features
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
   FaHeartbeat,
@@ -13,6 +14,7 @@ import {
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const router = useRouter();
 
   const features = [
     {
@@ -134,7 +136,14 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mt-20 text-center"
         >
-          <button className="btn-modern">Schedule a Tour</button>
+          <button
+            className="btn-modern"
+            onClick={() => {
+              router.push("/contact");
+            }}
+          >
+            Schedule a Tour
+          </button>
           <p className="mt-4 text-gray-600">
             Come visit us and see our facilities firsthand!
           </p>

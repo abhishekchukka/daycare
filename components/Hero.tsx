@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   const slides = [
     {
@@ -49,6 +50,128 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
+      {/* Opening Soon Announcement Banner */}
+      {showAnnouncement && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4"
+          >
+            {/* Header with Yellow Background */}
+            <div className="bg-[var(--color-yellow)] rounded-t-lg p-4 flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="animate-pulse"
+                >
+                  <path d="M6 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M6 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2"></path>
+                  <path d="M6 6h12v12H6z"></path>
+                </svg>
+                <h3 className="font-bold text-xl">Opening Soon!</h3>
+              </div>
+              <button
+                onClick={() => setShowAnnouncement(false)}
+                className="text-black hover:text-gray-800"
+                aria-label="Close announcement"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <h4 className="text-xl font-bold mb-3 text-gray-800">
+                Little Soldiers Family DayCare is launching September 15th,
+                2025!
+              </h4>
+
+              <div className="space-y-4 text-gray-600">
+                <p>
+                  <span className="font-semibold">✦ Expert Care:</span> Our
+                  facility will be operated by highly experienced childcare
+                  professionals with over 8 years of combined experience in
+                  early childhood education.
+                </p>
+
+                <p>
+                  <span className="font-semibold">✦ Modern Facility:</span>{" "}
+                  Bright, spacious classrooms filled with age-appropriate
+                  learning materials and a large outdoor play area for physical
+                  development.
+                </p>
+
+                <p>
+                  <span className="font-semibold">
+                    ✦ Comprehensive Programs:
+                  </span>{" "}
+                  Developmentally appropriate curriculum for children ages 6
+                  months to 5 years, focusing on social, emotional, and
+                  cognitive growth.
+                </p>
+
+                <p>
+                  <span className="font-semibold">
+                    ✦ Limited Spots Available:
+                  </span>{" "}
+                  Secure your child's place by pre-registering today! Our
+                  priority enrollment period is now open.
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mt-6">
+                <button
+                  onClick={() => {
+                    setShowAnnouncement(false);
+                    scrollToContact();
+                  }}
+                  className="w-full py-3 bg-[var(--color-yellow)] hover:bg-yellow-400 text-black font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <span>Learn More & Pre-Register</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full">
         <AnimatePresence initial={false} mode="sync">
@@ -98,6 +221,35 @@ export default function Hero() {
               {slides[currentSlide].description}
             </p>
 
+            {/* Opening Information Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="glass-card-dark p-6 mb-8 border-l-4 border-[var(--color-yellow)]"
+            >
+              <h3 className="text-[var(--color-yellow)] text-xl font-semibold mb-2">
+                Opening Soon: September 2025
+              </h3>
+              <p className="text-gray-200 mb-3">
+                Little Soldiers Family DayCare will be operated by highly
+                experienced childcare professionals with over 8 years of
+                combined experience in early childhood education and
+                development.
+              </p>
+              <p className="text-gray-200 mb-3">
+                Our facility will provide care for children ages 6 months to 5
+                years in bright, thoughtfully designed classrooms equipped with
+                age-appropriate learning materials. Our spacious outdoor play
+                area supports physical development and exploration.
+              </p>
+              <p className="text-gray-200">
+                We're committed to creating a nurturing environment where
+                children can learn, grow, and thrive while parents enjoy peace
+                of mind knowing their little ones are in capable hands.
+              </p>
+            </motion.div>
+
             <div className="flex flex-wrap gap-4">
               <button onClick={scrollToContact} className="btn-modern glow">
                 Schedule a Visit
@@ -106,7 +258,7 @@ export default function Hero() {
                 onClick={scrollToContact}
                 className="px-8 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
               >
-                Register Now
+                Pre-Register Now
               </button>
             </div>
 

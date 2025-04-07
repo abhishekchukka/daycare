@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Gallery() {
   const galleryItems = [
     {
-      src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Creative Play",
       size: "large",
       emoji: "🎨",
