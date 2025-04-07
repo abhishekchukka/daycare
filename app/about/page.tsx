@@ -263,8 +263,8 @@ export default function AboutPage() {
       </section>
 
       {/* Journey Section */}
-      <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16 ">
+        <div className="container mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -275,7 +275,7 @@ export default function AboutPage() {
             {aboutData.journey.title}
           </motion.h2>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-xl mx-auto">
             {aboutData.journey.milestones.map((milestone, index) => (
               <motion.div
                 key={index}

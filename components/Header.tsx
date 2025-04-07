@@ -61,11 +61,11 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4  flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Logo className="size-20" />
           <span
-            className={`${righteous.className} text-center text-4xl md:text-3xl py-8 font-bold tracking-wider flex flex-wrap`}
+            className={`${righteous.className} text-center text-2xl md:text-3xl hidden md:block   font-bold tracking-wider  flex-wrap`}
           >
             {coloredTitle}
           </span>
