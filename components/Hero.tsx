@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
-  const getColoredTitle = (title) => {
+  const getColoredTitle = (title:String) => {
     const colors = [
       "var(--color-red)",
       "var(--color-orange)",
@@ -17,7 +17,7 @@ export default function Hero() {
       "var(--color-pink)",
     ];
 
-    return title.split("").map((letter, index) => {
+    return title.split("").map((letter:String, index:number) => {
       const color = colors[index % colors.length];
       return letter === " " ? (
         <span key={index}>&nbsp;</span>
