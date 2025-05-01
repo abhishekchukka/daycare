@@ -7,9 +7,12 @@ import {
   FaPalette,
   FaBookReader,
   FaHeart,
+<<<<<<< HEAD
   FaChalkboardTeacher,
   FaShieldAlt,
   FaCalendarAlt,
+=======
+>>>>>>> e796e4f3fb22eb1c501528c68da132a16d95f7f9
   // FaSeedling,
 } from "react-icons/fa";
 // import { GiMeditation, GiJumpingRope } from "react-icons/gi";
