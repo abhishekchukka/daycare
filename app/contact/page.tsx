@@ -1,15 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaClock,
-  FaPaperPlane,
-} from "react-icons/fa";
+
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 
 const contactData = {
   hero: {
@@ -32,97 +25,8 @@ const contactData = {
 };
 
 // First, let's define the proper types
-interface FormData {
-  parentName: string;
-  childName: string;
-  childAge: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
-interface StatusInfo {
-  error: boolean;
-  msg: string | null;
-}
-
-interface Status {
-  submitted: boolean;
-  submitting: boolean;
-  info: StatusInfo;
-}
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState<FormData>({
-    parentName: "",
-    childName: "",
-    childAge: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState<Status>({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null },
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-
-    try {
-      await emailjs.send(
-        "service_hw8pfzh",
-        "template_m4p5h2t",
-        {
-          from_name: formData.parentName,
-          child_name: formData.childName,
-          child_age: formData.childAge,
-          reply_to: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-        "kgGBUF0rUow8axpET"
-      );
-
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: "Message sent successfully!" },
-      });
-
-      setFormData({
-        parentName: "",
-        childName: "",
-        childAge: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    } catch (err) {
-      console.error(err);
-      setStatus({
-        submitted: false,
-        submitting: false,
-        info: {
-          error: true,
-          msg: "An error occurred. Please try again later.",
-        },
-      });
-    }
-  };
-
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -235,140 +139,28 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white rounded-2xl p-8 shadow-lg"
+              className="bg-white rounded-2xl p-8 py-32 shadow-lg text-center h-fit  flex-col justify-center my-auto"
             >
-              <h3 className="text-2xl font-bold mb-6 text-purple-600">
+              <h3 className="text-3xl font-bold mb-6  text-purple-600">
                 Register Your Child
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="parentName"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Parent&apos;s Name
-                    </label>
-                    <input
-                      type="text"
-                      id="parentName"
-                      value={formData.parentName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="childName"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Child&apos;s Name
-                    </label>
-                    <input
-                      type="text"
-                      id="childName"
-                      value={formData.childName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="childAge"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Child&apos;s Age
-                    </label>
-                    <input
-                      type="text"
-                      id="childAge"
-                      value={formData.childAge}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                    />
-                  </div>
-                </div>
+              <p className="text-gray-700 mb-8 text-lg max-w-lg mx-auto">
+                We’ve partnered with HiMama(Lilio) to securely collect your
+                registration details. Click the button below to be redirected to
+                our official registration form.
+              </p>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Additional Information
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  disabled={status.submitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity duration-300"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <FaPaperPlane className="text-lg" />
-                  <span>
-                    {status.submitting ? "Sending..." : "Submit Registration"}
-                  </span>
-                </motion.button>
-
-                {status.info.msg && (
-                  <div
-                    className={`mt-4 p-4 rounded-xl ${
-                      status.info.error
-                        ? "bg-red-100 text-red-700"
-                        : "bg-green-100 text-green-700"
-                    }`}
-                  >
-                    {status.info.msg}
-                  </div>
-                )}
-              </form>
+              <motion.a
+                href="http://himama.com/online_registration/apply/little-soldiers-family-daycare-inc"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all duration-300"
+              >
+                Go to Registration Form
+              </motion.a>
             </motion.div>
           </div>
         </div>

@@ -7,15 +7,27 @@ import {
   FaPalette,
   FaBookReader,
   FaHeart,
-  FaSeedling,
+  FaChalkboardTeacher,
+  FaShieldAlt,
+  FaCalendarAlt,
+  // FaSeedling,
 } from "react-icons/fa";
 // import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";
-import { useState } from "react";
+// import { useState } from "react";
 // import Router, { useRouter } from "next/router";
 import Link from "next/link";
+import { FaBook, FaChartLine, FaStar } from "react-icons/fa6";
 
 // Additional content for the Programs page
+const featureIcons = [
+  FaBook,
+  FaChalkboardTeacher,
+  FaShieldAlt,
+  FaChartLine,
+  FaCalendarAlt,
+  FaStar,
+];
 const programsPageContent = {
   intro: {
     title: "More Than Just Daycare",
@@ -75,60 +87,60 @@ export default function ProgramsPage() {
   // const router = useRouter();
   // const [currentProgram, setCurrentProgram] = useState(0);
 
-  const detailedPrograms = [
-    {
-      name: "Early Explorers",
-      age: "1-2 years",
-      icon: <FaSeedling className="text-4xl text-pink-500" />,
-      iconBg: "bg-pink-50",
-      role: "Foundation Program",
-      methodology: [
-        {
-          title: "Montessori Approach",
-          description:
-            "Child-led learning experiences that foster independence and natural curiosity",
-        },
-        {
-          title: "Sensory Learning",
-          description:
-            "Multi-sensory activities that engage all senses for comprehensive development",
-        },
-        {
-          title: "Guided Discovery",
-          description:
-            "Teacher-facilitated exploration that encourages problem-solving skills",
-        },
-        {
-          title: "Play-Based Learning",
-          description:
-            "Structured and unstructured play opportunities for natural development",
-        },
-      ],
-      outcomes: {
-        physical: [
-          "Enhanced fine motor skills through sensory activities",
-          "Improved gross motor development through movement",
-        ],
-        cognitive: [
-          "Development of object permanence",
-          "Enhanced sensory processing abilities",
-        ],
-      },
-      parentInvolvement: {
-        updates: [
-          "Daily activity reports",
-          "Monthly progress updates",
-          "Photo documentation",
-        ],
-        participation: [
-          "Parent-teacher meetings",
-          "Family activity days",
-          "Educational workshops",
-        ],
-      },
-    },
-    // Add similar objects for other programs
-  ];
+  // const detailedPrograms = [
+  //   {
+  //     name: "Early Explorers",
+  //     age: "1-2 years",
+  //     icon: <FaSeedling className="text-4xl text-pink-500" />,
+  //     iconBg: "bg-pink-50",
+  //     role: "Foundation Program",
+  //     methodology: [
+  //       {
+  //         title: "Montessori Approach",
+  //         description:
+  //           "Child-led learning experiences that foster independence and natural curiosity",
+  //       },
+  //       {
+  //         title: "Sensory Learning",
+  //         description:
+  //           "Multi-sensory activities that engage all senses for comprehensive development",
+  //       },
+  //       {
+  //         title: "Guided Discovery",
+  //         description:
+  //           "Teacher-facilitated exploration that encourages problem-solving skills",
+  //       },
+  //       {
+  //         title: "Play-Based Learning",
+  //         description:
+  //           "Structured and unstructured play opportunities for natural development",
+  //       },
+  //     ],
+  //     outcomes: {
+  //       physical: [
+  //         "Enhanced fine motor skills through sensory activities",
+  //         "Improved gross motor development through movement",
+  //       ],
+  //       cognitive: [
+  //         "Development of object permanence",
+  //         "Enhanced sensory processing abilities",
+  //       ],
+  //     },
+  //     parentInvolvement: {
+  //       updates: [
+  //         "Daily activity reports",
+  //         "Monthly progress updates",
+  //         "Photo documentation",
+  //       ],
+  //       participation: [
+  //         "Parent-teacher meetings",
+  //         "Family activity days",
+  //         "Educational workshops",
+  //       ],
+  //     },
+  //   },
+  //   // Add similar objects for other programs
+  // ];
 
   // const nextProgram = () => {
   //   setCurrentProgram((prev) => (prev + 1) % detailedPrograms.length);
@@ -214,7 +226,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+      {/* <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -245,6 +257,45 @@ export default function ProgramsPage() {
                 <p className="text-gray-800 font-medium">{feature}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section> */}
+      <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+              {programsPageContent.overview.title}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {programsPageContent.overview.description}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {programsPageContent.overview.features.map((feature, index) => {
+              const Icon = featureIcons[index];
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="absolute top-4 left-4 transform transition-transform duration-300 hover:scale-110 text-purple-500">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <p className="text-gray-800 font-medium mt-8">{feature}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
