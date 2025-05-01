@@ -7,18 +7,13 @@ import {
   FaPalette,
   FaBookReader,
   FaHeart,
-<<<<<<< HEAD
   FaChalkboardTeacher,
   FaShieldAlt,
   FaCalendarAlt,
-=======
->>>>>>> e796e4f3fb22eb1c501528c68da132a16d95f7f9
-  // FaSeedling,
 } from "react-icons/fa";
 // import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";
-// import { useState } from "react";
-// import Router, { useRouter } from "next/router";
+
 import Link from "next/link";
 import { FaBook, FaChartLine, FaStar } from "react-icons/fa6";
 
@@ -87,81 +82,6 @@ const programsPageContent = {
 };
 
 export default function ProgramsPage() {
-  // const router = useRouter();
-  // const [currentProgram, setCurrentProgram] = useState(0);
-
-  // const detailedPrograms = [
-  //   {
-  //     name: "Early Explorers",
-  //     age: "1-2 years",
-  //     icon: <FaSeedling className="text-4xl text-pink-500" />,
-  //     iconBg: "bg-pink-50",
-  //     role: "Foundation Program",
-  //     methodology: [
-  //       {
-  //         title: "Montessori Approach",
-  //         description:
-  //           "Child-led learning experiences that foster independence and natural curiosity",
-  //       },
-  //       {
-  //         title: "Sensory Learning",
-  //         description:
-  //           "Multi-sensory activities that engage all senses for comprehensive development",
-  //       },
-  //       {
-  //         title: "Guided Discovery",
-  //         description:
-  //           "Teacher-facilitated exploration that encourages problem-solving skills",
-  //       },
-  //       {
-  //         title: "Play-Based Learning",
-  //         description:
-  //           "Structured and unstructured play opportunities for natural development",
-  //       },
-  //     ],
-  //     outcomes: {
-  //       physical: [
-  //         "Enhanced fine motor skills through sensory activities",
-  //         "Improved gross motor development through movement",
-  //       ],
-  //       cognitive: [
-  //         "Development of object permanence",
-  //         "Enhanced sensory processing abilities",
-  //       ],
-  //     },
-  //     parentInvolvement: {
-  //       updates: [
-  //         "Daily activity reports",
-  //         "Monthly progress updates",
-  //         "Photo documentation",
-  //       ],
-  //       participation: [
-  //         "Parent-teacher meetings",
-  //         "Family activity days",
-  //         "Educational workshops",
-  //       ],
-  //     },
-  //   },
-  //   // Add similar objects for other programs
-  // ];
-
-  // const nextProgram = () => {
-  //   setCurrentProgram((prev) => (prev + 1) % detailedPrograms.length);
-  // };
-
-  // const prevProgram = () => {
-  //   setCurrentProgram((prev) =>
-  //     prev === 0 ? detailedPrograms.length - 1 : prev - 1
-  //   );
-  // };
-
-  // const scrollToContact = () => {
-  //   const contactSection = document.getElementById("footer");
-  //   if (contactSection) {
-  //     contactSection.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
