@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import Image from "next/image";
-import { FaLocationDot, FaLocationPin } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
   return (

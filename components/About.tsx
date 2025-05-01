@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
-  FaHeartbeat,
+  // FaHeartbeat,
   FaGraduationCap,
   FaSmile,
   FaMobileAlt,

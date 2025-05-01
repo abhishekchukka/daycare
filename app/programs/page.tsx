@@ -73,7 +73,7 @@ const programsPageContent = {
 
 export default function ProgramsPage() {
   // const router = useRouter();
-  const [currentProgram, setCurrentProgram] = useState(0);
+  // const [currentProgram, setCurrentProgram] = useState(0);
 
   const detailedPrograms = [
     {
@@ -130,15 +130,15 @@ export default function ProgramsPage() {
     // Add similar objects for other programs
   ];
 
-  const nextProgram = () => {
-    setCurrentProgram((prev) => (prev + 1) % detailedPrograms.length);
-  };
+  // const nextProgram = () => {
+  //   setCurrentProgram((prev) => (prev + 1) % detailedPrograms.length);
+  // };
 
-  const prevProgram = () => {
-    setCurrentProgram((prev) =>
-      prev === 0 ? detailedPrograms.length - 1 : prev - 1
-    );
-  };
+  // const prevProgram = () => {
+  //   setCurrentProgram((prev) =>
+  //     prev === 0 ? detailedPrograms.length - 1 : prev - 1
+  //   );
+  // };
 
   // const scrollToContact = () => {
   //   const contactSection = document.getElementById("footer");

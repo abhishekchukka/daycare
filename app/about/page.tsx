@@ -110,12 +110,12 @@ const aboutData = {
 };
 
 export default function AboutPage() {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToContact = () => {
+  //   const contactSection = document.getElementById("contact");
+  //   if (contactSection) {
+  //     contactSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <main className="min-h-screen">
@@ -192,7 +192,7 @@ export default function AboutPage() {
               📊 Coming Soon
             </p>
             <p className="text-gray-600 text-base max-w-xl mx-auto">
-              We're cooking up something awesome! Our stats will be live
+              We are cooking up something awesome! Our stats will be live
               shortly.
             </p>
           </motion.div>
