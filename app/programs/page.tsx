@@ -7,7 +7,7 @@ import {
   FaPalette,
   FaBookReader,
   FaHeart,
-  FaSeedling,
+  // FaSeedling,
 } from "react-icons/fa";
 // import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";
