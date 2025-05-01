@@ -10,6 +10,7 @@ import {
   FaMobileAlt,
   FaShieldAlt,
   FaUtensils,
+  FaBaby,
 } from "react-icons/fa";
 
 export default function About() {
@@ -18,45 +19,53 @@ export default function About() {
 
   const features = [
     {
-      icon: <FaShieldAlt className="text-5xl text-[var(--color-blue)]" />,
+      icon: <FaBaby className="text-5xl text-[var(--color-blue)]" />,
+      title: "Infant Care Excellence",
+      description:
+        "Our dedicated caregivers provide gentle, attentive, and individualized care to ensure your baby’s comfort, security, and early development.",
+      stats: "Tender Loving Care",
+    },
+
+    {
+      icon: <FaShieldAlt className="text-5xl text-red-500" />,
       title: "Safety First Environment",
       description:
-        "State-of-the-art security systems, child-safe facilities, and strict safety protocols ensure your child&apos;s wellbeing is our top priority.",
-      stats: "100% Safety Record",
+        "State-of-the-art security systems, child-safe facilities, and strict safety protocols ensure your child well-being is our top priority.",
+      stats: "24/7 cctv surveillance ",
     },
     {
       icon: <FaGraduationCap className="text-5xl text-[var(--color-green)]" />,
       title: "Expert Educators",
       description:
         "Our certified teachers and caregivers bring years of experience in early childhood education, ensuring quality learning and development.",
-      stats: "15+ Years Experience",
+      stats: "8+ Years Experience",
     },
     {
       icon: <FaSmile className="text-5xl text-[var(--color-yellow)]" />,
       title: "Nurturing Environment",
       description:
         "We create a warm, inclusive atmosphere where every child feels loved, respected, and encouraged to explore their potential.",
-      stats: "500+ Happy Children",
+      stats: " Happy Children",
     },
     {
       icon: <FaMobileAlt className="text-5xl text-[var(--color-purple)]" />,
       title: "Parent Connect App",
       description:
-        "Stay updated with real-time notifications, daily activity reports, and precious moments of your child&apos;s day through our mobile app.",
+        "Stay updated with real-time notifications, daily activity reports, and precious moments of your child day through our mobile app.",
       stats: "24/7 Updates",
     },
-    {
-      icon: <FaHeartbeat className="text-5xl text-[var(--color-red)]" />,
-      title: "Health & Wellness",
-      description:
-        "Regular health monitoring, balanced nutrition plans, and physical activities ensure your child&apos;s holistic development.",
-      stats: "Certified Healthcare",
-    },
+    // {
+    //   icon: <FaHeartbeat className="text-5xl text-[var(--color-red)]" />,
+    //   title: "Health & Wellness",
+    //   description:
+    //     "Regular health monitoring, balanced nutrition plans, and physical activities ensure your child&apos;s holistic development.",
+    //   stats: "Certified Healthcare",
+    // },
     {
       icon: <FaUtensils className="text-5xl text-[var(--color-orange)]" />,
-      title: "Nutritious Meals",
+      title: "Nutritious Snacks",
       description:
-        "Fresh, balanced, and kid-friendly meals prepared daily by our nutrition experts to fuel growing minds and bodies.",
+        "Fresh, balanced , tasty and kid-friendly variety of  snacks  provided daily to fuel growing minds and bodies .",
       stats: "100% Fresh Food",
     },
   ];

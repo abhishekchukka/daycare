@@ -12,6 +12,8 @@ import {
 // import { GiMeditation, GiJumpingRope } from "react-icons/gi";
 import Programs from "@/components/Programs";
 import { useState } from "react";
+// import Router, { useRouter } from "next/router";
+import Link from "next/link";
 
 // Additional content for the Programs page
 const programsPageContent = {
@@ -70,6 +72,7 @@ const programsPageContent = {
 };
 
 export default function ProgramsPage() {
+  // const router = useRouter();
   const [currentProgram, setCurrentProgram] = useState(0);
 
   const detailedPrograms = [
@@ -137,12 +140,12 @@ export default function ProgramsPage() {
     );
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToContact = () => {
+  //   const contactSection = document.getElementById("footer");
+  //   if (contactSection) {
+  //     contactSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <main className="min-h-screen">
@@ -274,16 +277,16 @@ export default function ProgramsPage() {
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {programsPageContent.finalPitch.message}
               </p>
-              <button onClick={scrollToContact} className="btn-modern">
+              <Link href="/contact" className="btn-modern">
                 Register Now
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Detailed Program Information */}
-      <section
+      {/* <section
         id="program-details"
         className="py-20 bg-gradient-to-b from-purple-50 to-white"
       >
@@ -435,7 +438,7 @@ export default function ProgramsPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

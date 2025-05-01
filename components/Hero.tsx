@@ -6,6 +6,32 @@ import { useState, useEffect } from "react";
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const getColoredTitle = (title) => {
+    const colors = [
+      "var(--color-red)",
+      "var(--color-orange)",
+      "var(--color-yellow)",
+      "var(--color-green)",
+      "var(--color-blue)",
+      "var(--color-purple)",
+      "var(--color-pink)",
+    ];
+
+    return title.split("").map((letter, index) => {
+      const color = colors[index % colors.length];
+      return letter === " " ? (
+        <span key={index}>&nbsp;</span>
+      ) : (
+        <span
+          key={index}
+          className="hover:animate-bounce inline-block transition-all duration-200 drop-shadow-md shadow-white"
+          style={{ color }}
+        >
+          {letter}
+        </span>
+      );
+    });
+  };
 
   const slides = [
     {
@@ -13,7 +39,7 @@ export default function Hero() {
       description:
         "Where every child's journey begins with love, care, and endless possibilities.",
       image:
-        "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       highlight: "Nurturing Hearts, Growing Minds",
     },
     {
@@ -104,8 +130,7 @@ export default function Hero() {
             {/* Content */}
             <div className="p-6">
               <h4 className="text-xl font-bold mb-3 text-gray-800">
-                Little Soldiers Family DayCare is launching September 15th,
-                2025!
+                Little Soldiers Family DayCare is launching this summer, 2025!
               </h4>
 
               <div className="space-y-4 text-gray-600">
@@ -128,7 +153,7 @@ export default function Hero() {
                     ✦ Comprehensive Programs:
                   </span>{" "}
                   Developmentally appropriate curriculum for children ages 6
-                  months to 5 years, focusing on social, emotional, and
+                  months months to 12 years, focusing on social, emotional, and
                   cognitive growth.
                 </p>
 
@@ -214,8 +239,8 @@ export default function Hero() {
             <span className="inline-block px-4 py-2 rounded-full bg-[var(--color-yellow)] text-black text-sm font-semibold mb-4">
               {slides[currentSlide].highlight}
             </span>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-white">
-              {slides[currentSlide].title}
+            <h1 className="text-3xl lg:text-3xl font-bold mb-6 text-white bg-gradient-to-r from-black to-purple-900flex justify-center w-fit p-2 rounded-full">
+              {getColoredTitle(slides[currentSlide].title)}
             </h1>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
               {slides[currentSlide].description}
@@ -229,19 +254,26 @@ export default function Hero() {
               className="glass-card-dark p-6 mb-8 border-l-4 border-[var(--color-yellow)]"
             >
               <h3 className="text-[var(--color-yellow)] text-xl font-semibold mb-2">
-                Opening Soon: September 2025
+                Opening Soon:This Summer!!!!
               </h3>
               <p className="text-gray-200 mb-3">
                 Little Soldiers Family DayCare will be operated by highly
-                experienced childcare professionals with over 8 years of
+                experienced childcare professionals with over{" "}
+                <span className="text-yellow-300 font-medium">8 years</span> of
                 combined experience in early childhood education and
                 development.
               </p>
               <p className="text-gray-200 mb-3">
-                Our facility will provide care for children ages 6 months to 5
-                years in bright, thoughtfully designed classrooms equipped with
-                age-appropriate learning materials. Our spacious outdoor play
-                area supports physical development and exploration.
+                Our facility will provide care for children ages
+                <span className="text-yellow-300 font-medium">
+                  {" "}
+                  6 months
+                </span>{" "}
+                to
+                <span className="text-yellow-300 font-medium"> 12 years</span> ,
+                thoughtfully designed classrooms equipped with age-appropriate
+                learning materials. Our spacious outdoor play area supports
+                physical development and exploration.
               </p>
               <p className="text-gray-200">
                 We are committed to creating a nurturing environment where
@@ -265,19 +297,19 @@ export default function Hero() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="glass-card-dark px-6 py-4">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
-                  7:30 AM
+                  7:00 AM
                 </p>
                 <p className="text-sm text-gray-300">Opening Time</p>
               </div>
               <div className="glass-card-dark px-6 py-4">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
-                  5:30 PM
+                  6:00 PM
                 </p>
                 <p className="text-sm text-gray-300">Closing Time</p>
               </div>
               <div className="glass-card-dark px-6 py-4">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
-                  Mon-Fri
+                  Mon-Sun
                 </p>
                 <p className="text-sm text-gray-300">Working Days</p>
               </div>

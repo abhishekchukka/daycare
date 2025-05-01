@@ -118,7 +118,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700">Visit Us</h4>
-                  <p className="text-gray-600">123 Playful Street, Kidsville</p>
+                  <p className="text-gray-600">
+                    4912 Broadway Ave, Blackfalds, AB T0M 0J0
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -127,7 +129,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700">Email Us</h4>
-                  <p className="text-gray-600">hello@littlesoldiers.com</p>
+                  <p className="text-gray-600">
+                    Littlesoldiersfamilydaycare@gmail.com
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -136,7 +140,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700">Call Us</h4>
-                  <p className="text-gray-600">(123) 456-7890</p>
+                  <p className="text-gray-600">+1 (306) 202-7431</p>
                 </div>
               </div>
             </div>

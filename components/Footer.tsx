@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import Image from "next/image";
+import { FaLocationDot, FaLocationPin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -61,10 +62,16 @@ export default function Footer() {
           <div className="w-full ">
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="text-gray-400 mb-2">
-              123 Sunshine Lane, Happyville, USA
+              4912 Broadway Ave, Blackfalds, AB T0M 0J0
+              <a href="https://g.co/kgs/5rZxwYy" className="flex items-center">
+                <FaLocationDot className="text-green-200 size-4" />
+                Open Maps
+              </a>
             </p>
-            <p className="text-gray-400 mb-2">Phone: (555) 123-4567</p>
-            <p className="text-gray-400">Email: info@happyhandsdaycare.com</p>
+            <p className="text-gray-400 mb-2">Phone: +1 (306) 202-7431</p>
+            <p className="text-gray-400">
+              Email: littlesoldiersfamilydaycare@gmail.com
+            </p>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">

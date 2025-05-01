@@ -20,14 +20,14 @@ const contactData = {
   },
   details: {
     address: "4912 Broadway Ave, Blackfalds, AB T0M 0J0",
-    phone: "(123) 456-7890",
-    email: "hello@littlesoldiers.com",
+    phone: "+1 (306) 202-7431",
+    email: "littlesoldiersfamilydaycare@gmail",
     hours: {
-      weekday: "7:30 AM - 5:30 PM",
-      weekend: "Closed",
+      weekday: "7:00 AM - 6:00 PM",
+      // weekend: "Closed",
     },
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.686666539986!2d-113.7874661!3d52.3796905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5377c4d1831ea641%3A0x1fb3e957116f2e9e!2s4912%20Broadway%20Ave%2C%20Blackfalds%2C%20AB%20T0M%200J0!5e0!3m2!1sen!2sca!4v1647901234567!5m2!1sen!2sca",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.5396910377854!2d-113.7957232!3d52.3787661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5375006c903f549f%3A0x86b0d6c89107820d!2s4912%20Broadway%20Ave%2C%20Blackfalds%2C%20AB%20T0M%200J0%2C%20Canada!5e0!3m2!1sen!2sin!4v1746091722590!5m2!1sen!2sin",
   },
 };
 
@@ -208,9 +208,9 @@ export default function ContactPage() {
                       <p className="text-gray-600">
                         Monday - Friday: {contactData.details.hours.weekday}
                       </p>
-                      <p className="text-gray-600">
+                      {/* <p className="text-gray-600">
                         Saturday - Sunday: {contactData.details.hours.weekend}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>

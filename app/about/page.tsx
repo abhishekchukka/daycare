@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart, FaGraduationCap, FaUsers, FaSmile } from "react-icons/fa";
 // import Header from "@/components/Header";
 
@@ -104,7 +105,7 @@ const aboutData = {
     message:
       "Give your child the gift of joyful learning and caring support. We're more than a daycare – we're a community where every child belongs.",
     image:
-      "https://plus.unsplash.com/premium_photo-1661475944092-9561bd954235?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1559734840-f9509ee5677f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 };
 
@@ -174,8 +175,70 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - Coming Soon */}
       <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
+        <h2 className="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          Our Stats
+        </h2>
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/70 border border-dashed border-purple-300 text-center rounded-2xl py-20 px-8 shadow-inner hover:shadow-lg transition"
+          >
+            <p className="text-xl md:text-2xl font-semibold text-purple-500 mb-2">
+              📊 Coming Soon
+            </p>
+            <p className="text-gray-600 text-base max-w-xl mx-auto">
+              We're cooking up something awesome! Our stats will be live
+              shortly.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section - Coming Soon */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              The passionate educators behind our success
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gray-100 border border-dashed border-pink-300 text-center rounded-2xl py-20 px-8 shadow-inner hover:shadow-lg transition"
+          >
+            <p className="text-xl md:text-2xl font-semibold text-pink-500 mb-2">
+              👩‍🏫 Coming Soon
+            </p>
+            <p className="text-gray-600 text-base max-w-xl mx-auto">
+              Our amazing team will be introduced soon. Stay tuned!
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      {/* <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
+        <h2 className="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          Our Stats
+        </h2>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {aboutData.stats.map((stat, index) => (
@@ -201,10 +264,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -260,10 +323,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Journey Section */}
-      <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16 ">
+      {/* <section className="bg-gradient-to-r from-purple-50 to-pink-50 py-16 ">
         <div className="container mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -300,7 +363,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final Pitch */}
       <section className="py-20">
@@ -327,9 +390,9 @@ export default function AboutPage() {
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {aboutData.finalPitch.message}
               </p>
-              <button onClick={scrollToContact} className="btn-modern">
+              <Link href={"/contact"} className="btn-modern">
                 Start Your Journey
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

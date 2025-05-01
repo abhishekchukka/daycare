@@ -30,7 +30,6 @@ export default function Programs() {
       ],
       highlights: ["Safe Environment", "Caring Teachers", "Fun Activities"],
       techniques: [
-        { name: "Montessori", icon: "🎯" },
         { name: "Play-based", icon: "🎲" },
         { name: "Sensory Play", icon: "🎨" },
         { name: "Guided Discovery", icon: "🔍" },
@@ -44,8 +43,8 @@ export default function Programs() {
       color: "from-blue-500 to-cyan-500",
       icon: <GiMeditation className="text-5xl text-blue-500" />,
       activities: [
-        { name: "Yoga", icon: "🧘‍♀️" },
-        { name: "Art Therapy", icon: "🎨" },
+        { name: "Music & Movement", icon: "🎵" },
+        { name: "Art ", icon: "🎨" },
         { name: "Nature Walks", icon: "🌿" },
         { name: "Quiet Time", icon: "🧘" },
         { name: "Meditation", icon: "🪷" },
@@ -119,7 +118,7 @@ export default function Programs() {
         { name: "Dance", icon: "💃" },
         { name: "Games", icon: "🎮" },
         { name: "Exercise", icon: "🏃‍♂️" },
-        { name: "Yoga", icon: "🧘‍♀️" },
+        { name: "Music & Movement", icon: "🎵" },
         { name: "Team Sports", icon: "🤾" },
       ],
       highlights: ["Physical Fitness", "Team Spirit", "Motor Skills"],
@@ -159,6 +158,7 @@ export default function Programs() {
 
   const timeTable = {
     times: [
+      "7:00 AM",
       "8:00 AM",
       "9:00 AM",
       "10:00 AM",
@@ -170,8 +170,7 @@ export default function Programs() {
       "4:00 PM",
       "5:00 PM",
       "6:00 PM",
-      "7:00 PM",
-      "8:00 PM",
+      "after hours",
     ],
     days: [
       "Monday",
@@ -188,7 +187,7 @@ export default function Programs() {
         "Breakfast Time",
         "Learning Activities",
         "Outdoor Play",
-        "Arts & Crafts",
+        "Learning Activities",
         "Lunch Time",
         "Nap/Rest Time",
         "Story Time",
@@ -200,12 +199,12 @@ export default function Programs() {
       ],
       special: {
         Monday: {
-          "10:00 AM": "Swimming Class 🏊‍♂️",
-          "3:00 PM": "Science Experiments 🔬",
+          "10:00 AM": "Learning Activities ",
+          "3:00 PM": "Curiosity Hours🔬",
         },
         Wednesday: {
-          "10:00 AM": "Yoga Session 🧘‍♀️",
-          "3:00 PM": "Music Class 🎵",
+          "10:00 AM": "Learning Hours",
+          "3:00 PM": "Music and play🎵",
         },
         Friday: {
           "10:00 AM": "Sports Day 🏃‍♂️",
@@ -363,7 +362,7 @@ export default function Programs() {
                 </div>
 
                 {/* Remove the Learn More button and add a subtle indicator */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-purple-600 flex items-center gap-2">
                     Learn More
                     <svg
@@ -380,7 +379,7 @@ export default function Programs() {
                       />
                     </svg>
                   </span>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

@@ -65,7 +65,7 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <Logo className="size-20" />
           <span
-            className={`${righteous.className} text-center text-2xl md:text-3xl hidden md:block   font-bold tracking-wider  flex-wrap`}
+            className={`${righteous.className} text-center text-2xl ml-3 md:text-3xl hidden md:block   font-bold tracking-wider  flex-wrap`}
           >
             {coloredTitle}
           </span>
