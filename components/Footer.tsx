@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-1 flex items-center justify-start gap-x-5">
               <li>
                 <Link
-                  href={`/#`}
+                  href={`https://www.facebook.com/profile.php?id=61575463822406`}
                   className="text-gray-400 hover:text-white transition duration-300"
                 >
                   <Image
