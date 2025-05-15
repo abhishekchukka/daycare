@@ -1,5 +1,6 @@
 "use client";
 
+import SubsidyInformation from "@/components/SubsidyInformation";
 import { motion } from "framer-motion";
 
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
@@ -50,6 +51,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+      <SubsidyInformation />
 
       {/* Contact Details & Map */}
       <section className="py-20">
