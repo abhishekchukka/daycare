@@ -266,7 +266,7 @@ export default function Hero() {
               </p>
               <p className="text-gray-200 mb-3">
                 We provide{" "}
-                <span className="text-yellow-300 font-medium">homework assistance, nutritious meal preparation, and engaging field trips</span> to support your child's development.
+                <span className="text-yellow-300 font-medium">homework assistance, nutritious meal preparation, and engaging field trips</span> to support your child&apos;s development.
               </p>
               <p className="text-gray-200">
                 Proudly serving families in{" "}
