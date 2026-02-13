@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Gallery() {
   const galleryItems = [
     {
-      src: "https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/gallery-playroom-wide.jpg",
       title: "Creative Play",
       size: "large",
       emoji: "🎨",
@@ -26,7 +26,7 @@ export default function Gallery() {
       description: "Joy in every moment",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
+      src: "/activity-number-learning.jpg",
       title: "Learning Together",
       size: "small",
       emoji: "🧩",
@@ -40,7 +40,7 @@ export default function Gallery() {
       description: "Exploring nature's wonders",
     },
     {
-      src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop",
+      src: "/gallery-play-area-cart.jpg",
       title: "Happy Faces",
       size: "small",
       emoji: "😊",
@@ -75,8 +75,8 @@ export default function Gallery() {
                 item.size === "large"
                   ? "lg:col-span-2 lg:row-span-2"
                   : item.size === "medium"
-                  ? "lg:col-span-2"
-                  : ""
+                    ? "lg:col-span-2"
+                    : ""
               } transform-gpu`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

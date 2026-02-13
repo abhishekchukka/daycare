@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
 
   const getColoredTitle = (title: string) => {
     const colors = [
@@ -39,24 +39,21 @@ export default function Hero() {
       title: "Welcome to Little Soldiers Family DayCare",
       description:
         "Where every child's journey begins with love, care, and endless possibilities.",
-      image:
-        "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/hero-building-exterior.jpg",
       highlight: "Nurturing Hearts, Growing Minds",
     },
     {
       title: "A Safe Heaven for Your Little Ones",
       description:
         "Providing a secure, loving environment where children thrive through play-based learning.",
-      image:
-        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop",
+      image: "/hero-classroom-wide.jpg",
       highlight: "Safety First, Always",
     },
     {
       title: "Join Our Happy Family",
       description:
         "Experience a warm, inclusive community where every child's uniqueness is celebrated.",
-      image:
-        "https://images.unsplash.com/photo-1597413545419-4013431dbfec?q=80&w=2070&auto=format&fit=crop",
+      image: "/hero-activity-room.jpg",
       highlight: "Creating Memories Together",
     },
   ];
@@ -222,7 +219,7 @@ export default function Hero() {
                   />
                   <div className="absolute inset-0 bg-black/50" />
                 </motion.div>
-              )
+              ),
           )}
         </AnimatePresence>
       </div>
@@ -237,10 +234,10 @@ export default function Hero() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-[var(--color-yellow)] text-black text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-[var(--color-yellow)] text-black text-sm font-semibold mb-4 shadow-lg">
               {slides[currentSlide].highlight}
             </span>
-            <h1 className="text-3xl lg:text-3xl font-bold mb-6 text-white bg-gradient-to-r from-black to-purple-900flex justify-center w-fit p-2 rounded-full">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white drop-shadow-2xl">
               {getColoredTitle(slides[currentSlide].title)}
             </h1>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
@@ -254,32 +251,26 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="glass-card-dark p-6 mb-8 border-l-4 border-[var(--color-yellow)]"
             >
-              <h3 className="text-[var(--color-yellow)] text-xl font-semibold mb-2">
-                Opening Soon:This Summer!!!!
+              <h3 className="text-[var(--color-yellow)] text-xl font-semibold mb-3">
+                Licensed Childcare in Blackfalds
               </h3>
               <p className="text-gray-200 mb-3">
-                Little Soldiers Family DayCare will be operated by highly
-                experienced childcare professionals with over{" "}
-                <span className="text-yellow-300 font-medium">8 years</span> of
-                combined experience in early childhood education and
-                development.
+                Little Soldiers Family Daycare is a{" "}
+                <span className="text-yellow-300 font-medium">licensed daycare</span> providing a safe and nurturing environment for children aged{" "}
+                <span className="text-yellow-300 font-medium">6 months to 12 years</span>.
               </p>
               <p className="text-gray-200 mb-3">
-                Our facility will provide care for children ages
-                <span className="text-yellow-300 font-medium">
-                  {" "}
-                  6 months
-                </span>{" "}
-                to
-                <span className="text-yellow-300 font-medium"> 12 years</span> ,
-                thoughtfully designed classrooms equipped with age-appropriate
-                learning materials. Our spacious outdoor play area supports
-                physical development and exploration.
+                Our team of{" "}
+                <span className="text-yellow-300 font-medium">qualified educators</span> is dedicated to high-quality care, offering specialized programs including{" "}
+                <span className="text-yellow-300 font-medium">infant care, toddler activities, and Out of School Care (OSC)</span>.
+              </p>
+              <p className="text-gray-200 mb-3">
+                We provide{" "}
+                <span className="text-yellow-300 font-medium">homework assistance, nutritious meal preparation, and engaging field trips</span> to support your child's development.
               </p>
               <p className="text-gray-200">
-                We are committed to creating a nurturing environment where
-                children can learn, grow, and thrive while parents enjoy peace
-                of mind knowing their little ones are in capable hands.
+                Proudly serving families in{" "}
+                <span className="text-yellow-300 font-medium">Blackfalds and the Red Deer area</span> with reliable, professional childcare you can trust.
               </p>
             </motion.div>
 
@@ -289,28 +280,28 @@ export default function Hero() {
               </button>
               <button
                 onClick={scrollToContact}
-                className="px-8 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
+                className="px-8 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold"
               >
-                Pre-Register Now
+                Enroll Now
               </button>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="glass-card-dark px-6 py-4">
+              <div className="glass-card-dark px-6 py-4 hover:scale-105 transition-all duration-300 cursor-default border border-yellow-400/20">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
                   7:00 AM
                 </p>
                 <p className="text-sm text-gray-300">Opening Time</p>
               </div>
-              <div className="glass-card-dark px-6 py-4">
+              <div className="glass-card-dark px-6 py-4 hover:scale-105 transition-all duration-300 cursor-default border border-yellow-400/20">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
                   6:00 PM
                 </p>
                 <p className="text-sm text-gray-300">Closing Time</p>
               </div>
-              <div className="glass-card-dark px-6 py-4">
+              <div className="glass-card-dark px-6 py-4 hover:scale-105 transition-all duration-300 cursor-default border border-yellow-400/20">
                 <p className="text-2xl font-bold text-[var(--color-yellow)]">
-                  Mon-Sun
+                  Mon-Fri
                 </p>
                 <p className="text-sm text-gray-300">Working Days</p>
               </div>

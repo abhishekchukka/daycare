@@ -14,74 +14,74 @@ const galleryData = {
 
   images: [
     {
-      src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
-      title: "Creative Play",
-      description: "Children exploring their artistic abilities",
+      src: "/gallery-playroom-wide.jpg",
+      title: "Creative Play Area",
+      description: "Our spacious playroom with stairs and learning stations",
       size: "large", // large, medium, small
       category: "Activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=2070&auto=format&fit=crop",
-      title: "Story Time",
-      description: "Engaging young minds through storytelling",
+      src: "/activity-sensory-water.jpg",
+      title: "Water Sensory Play",
+      description: "Hands-on learning with water and toy fish",
       size: "small",
       category: "Learning",
     },
     {
-      src: "https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Outdoor Adventures",
-      description: "Exploring nature and staying active",
+      src: "/gallery-play-area-cart.jpg",
+      title: "Ice Cream Cart Fun",
+      description: "Imaginative play with our colorful ice cream cart",
       size: "medium",
       category: "Activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
-      title: "Group Activities",
-      description: "Building social skills through play",
+      src: "/activity-shapes-learning.jpg",
+      title: "Geometric Learning",
+      description: "Discovering shapes through hands-on activities",
       size: "small",
-      category: "Social",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop",
-      title: "Learning Together",
-      description: "Collaborative learning experiences",
-      size: "medium",
       category: "Learning",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
-      title: "Group Activities",
-      description: "Building social skills through play",
+      src: "/gallery-kitchen-area.jpg",
+      title: "Play Kitchen Area",
+      description: "Learning life skills through pretend play",
+      size: "medium",
+      category: "Activities",
+    },
+    {
+      src: "/activity-animal-sensory.jpg",
+      title: "Animal Discovery",
+      description: "Exploring with toy animals and sensory materials",
+      size: "small",
+      category: "Learning",
+    },
+    {
+      src: "/gallery-infant-room.jpg",
+      title: "Infant Care Room",
+      description: "Nurturing environment for our youngest learners",
       size: "small",
       category: "Social",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
-      title: "Group Activities",
-      description: "Building social skills through play",
-      size: "small",
-      category: "Social",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop",
-      title: "Happy Moments",
-      description: "Creating lasting memories",
+      src: "/activity-motor-skills.jpg",
+      title: "Fine Motor Development",
+      description: "Building skills with colorful springs and manipulatives",
       size: "large",
-      category: "Social",
+      category: "Learning",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
-      title: "Group Activities",
-      description: "Building social skills through play",
+      src: "/gallery-solar-mural.jpg",
+      title: "Educational Murals",
+      description: "Learning about space and planets on our walls",
       size: "small",
-      category: "Social",
+      category: "Learning",
     },
     {
-      src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop",
-      title: "Group Activities",
-      description: "Building social skills through play",
+      src: "/activity-foam-play.jpg",
+      title: "Sensory Exploration",
+      description: "Engaging senses with foam and tactile materials",
       size: "small",
-      category: "Social",
+      category: "Activities",
     },
   ],
 
@@ -129,8 +129,8 @@ export default function GalleryPage() {
                     image.size === "large"
                       ? "md:col-span-2 md:row-span-2"
                       : image.size === "medium"
-                      ? "md:col-span-2"
-                      : ""
+                        ? "md:col-span-2"
+                        : ""
                   }
                 `}
               >

@@ -10,11 +10,10 @@ import { FaHeart, FaGraduationCap, FaUsers, FaSmile } from "react-icons/fa";
 const aboutData = {
   greeting: {
     title: "Welcome to Our Family",
-    subtitle: "A Message from Our Heart",
+    subtitle: "Licensed Childcare in Blackfalds & Red Deer",
     message:
-      "At Little Soldiers Family DayCare, we believe every child deserves a nurturing environment where they can grow, learn, and thrive. Our journey began with a simple vision: to create a space where children feel loved, safe, and inspired.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1661475944092-9561bd954235?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Little Soldiers Family Daycare is a licensed daycare providing a safe and nurturing environment for children aged 6 months to 12 years. Our team of qualified educators is dedicated to high-quality care, offering specialized programs including infant care, toddler activities, and Out of School Care (OSC). We provide homework assistance, nutritious meal preparation, and engaging field trips to support your child's development in the Blackfalds and Red Deer area.",
+    image: "/hero-building-exterior.jpg",
   },
 
   stats: [
@@ -48,8 +47,7 @@ const aboutData = {
     {
       name: "Sarah Johnson",
       role: "Founder & Director",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
+      image: "/hero-building-exterior.jpg",
       description:
         "With over 15 years of experience in early childhood education, Sarah's passion for nurturing young minds drives our vision.",
       certifications: ["Early Childhood Education", "Child Psychology"],
@@ -57,8 +55,7 @@ const aboutData = {
     {
       name: "Michael Chen",
       role: "Lead Teacher",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+      image: "/hero-classroom-wide.jpg",
       description:
         "Michael brings creativity and enthusiasm to our program, making learning fun and engaging for every child.",
       certifications: ["Montessori Certified", "First Aid"],
@@ -66,8 +63,7 @@ const aboutData = {
     {
       name: "Emily Rodriguez",
       role: "Care Coordinator",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
+      image: "/gallery-playroom-wide.jpg",
       description:
         "Emily ensures our daily operations run smoothly while maintaining the highest standards of care and safety.",
       certifications: ["Child Development", "Healthcare Administration"],
@@ -104,8 +100,7 @@ const aboutData = {
     title: "Join Our Family",
     message:
       "Give your child the gift of joyful learning and caring support. We're more than a daycare – we're a community where every child belongs.",
-    image:
-      "https://images.unsplash.com/photo-1559734840-f9509ee5677f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/gallery-playroom-wide.jpg",
   },
 };
 
