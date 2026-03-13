@@ -22,7 +22,7 @@ const SubsidyInformation = () => {
               ✓ Alberta Affordability Grant Approved Centre
             </h2>
             <p className="text-lg text-gray-700 mb-4">
-              We are proud to be a participating centre in Alberta's
+              We are proud to be a participating centre in Alberta&apos;s
               Affordability Grant program.
             </p>
             <p className="text-base text-gray-600">

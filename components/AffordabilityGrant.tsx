@@ -37,7 +37,7 @@ export default function AffordabilityGrant() {
               <span className="font-semibold text-green-600">
                 We are proud to be a participating centre
               </span>{" "}
-              in Alberta's Affordability Grant program.
+              in Alberta&apos;s Affordability Grant program.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Eligible families receive significant fee reductions, which are
