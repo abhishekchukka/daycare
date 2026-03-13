@@ -14,6 +14,29 @@ const SubsidyInformation = () => {
 
   return (
     <div className="font-sans text-gray-800">
+      {/* Affordability Grant Banner */}
+      <div className="bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 border-b-4 border-green-400 py-12">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-teal-600">
+              ✓ Alberta Affordability Grant Approved Centre
+            </h2>
+            <p className="text-lg text-gray-700 mb-4">
+              We are proud to be a participating centre in Alberta's
+              Affordability Grant program.
+            </p>
+            <p className="text-base text-gray-600">
+              Eligible families receive significant fee reductions, which are
+              applied directly to your childcare costs each month.{" "}
+              <span className="font-semibold text-green-600">
+                No separate application is required
+              </span>{" "}
+              — the savings are built right into your fees.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Banner Section */}
       <div className="bg-purple-50 py-16">
         <div className="container mx-auto max-w-6xl px-4">

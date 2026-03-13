@@ -237,7 +237,7 @@ export default function Hero() {
             <span className="inline-block px-4 py-2 rounded-full bg-[var(--color-yellow)] text-black text-sm font-semibold mb-4 shadow-lg">
               {slides[currentSlide].highlight}
             </span>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white drop-shadow-2xl">
+            <h1 className="text-4xl font-bold mb-6 text-white drop-shadow-2xl">
               {getColoredTitle(slides[currentSlide].title)}
             </h1>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
@@ -256,21 +256,41 @@ export default function Hero() {
               </h3>
               <p className="text-gray-200 mb-3">
                 Little Soldiers Family Daycare is a{" "}
-                <span className="text-yellow-300 font-medium">licensed daycare</span> providing a safe and nurturing environment for children aged{" "}
-                <span className="text-yellow-300 font-medium">6 months to 12 years</span>.
+                <span className="text-yellow-300 font-medium">
+                  licensed daycare
+                </span>{" "}
+                providing a safe and nurturing environment for children aged{" "}
+                <span className="text-yellow-300 font-medium">
+                  6 months to 12 years
+                </span>
+                .
               </p>
               <p className="text-gray-200 mb-3">
                 Our team of{" "}
-                <span className="text-yellow-300 font-medium">qualified educators</span> is dedicated to high-quality care, offering specialized programs including{" "}
-                <span className="text-yellow-300 font-medium">infant care, toddler activities, and Out of School Care (OSC)</span>.
+                <span className="text-yellow-300 font-medium">
+                  qualified educators
+                </span>{" "}
+                is dedicated to high-quality care, offering specialized programs
+                including{" "}
+                <span className="text-yellow-300 font-medium">
+                  infant care, toddler activities, and Out of School Care (OSC)
+                </span>
+                .
               </p>
               <p className="text-gray-200 mb-3">
                 We provide{" "}
-                <span className="text-yellow-300 font-medium">homework assistance, nutritious meal preparation, and engaging field trips</span> to support your child&apos;s development.
+                <span className="text-yellow-300 font-medium">
+                  homework assistance, nutritious meal preparation, and engaging
+                  field trips
+                </span>{" "}
+                to support your child&apos;s development.
               </p>
               <p className="text-gray-200">
                 Proudly serving families in{" "}
-                <span className="text-yellow-300 font-medium">Blackfalds and the Red Deer area</span> with reliable, professional childcare you can trust.
+                <span className="text-yellow-300 font-medium">
+                  Blackfalds and the Red Deer area
+                </span>{" "}
+                with reliable, professional childcare you can trust.
               </p>
             </motion.div>
 
