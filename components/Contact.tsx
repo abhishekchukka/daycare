@@ -48,7 +48,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-700">Visit Us</h4>
                   <p className="text-gray-600">
-                    4912 Broadway Ave, Blackfalds, AB T0M 0J0
+                    4914 Broadway Ave https://share.google/GJKNelcEzwy9L1Jvk
                   </p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700">Call Us</h4>
-                  <p className="text-gray-600">+1 (306) 202-7431</p>
+                  <p className="text-gray-600">587 715 1434</p>
                 </div>
               </div>
             </div>
